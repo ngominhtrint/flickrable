@@ -1,0 +1,6 @@
+framework module Pods_Flickrable {
+  umbrella header "Pods-Flickrable-umbrella.h"
+
+  export *
+  module * { export * }
+}

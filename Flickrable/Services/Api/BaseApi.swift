@@ -11,13 +11,8 @@ import RxAlamofire
 import AlamofireObjectMapper
 import ObjectMapper
 
-#if FLICKR_DEV
-    let flickr_base_url: String = "https://api.flickr.com/services/rest/"
-    let flickr_api_key: String = "70132be7596614d6bd46879d7c438031"
-#else
-    let flickr_base_url: String = ""
-    let flickr_api_key: String = "xyz"
-#endif
+let flickr_base_url: String = "https://api.flickr.com/services/rest/"
+let flickr_api_key: String = "70132be7596614d6bd46879d7c438031"
 
 let ERROR_NORMAL_MESSAGE: String = "Error occured, please try again later."
 let ERROR_TOKEN_EXPIRE_MESSAGE: String = "Session expired, Please login again!"

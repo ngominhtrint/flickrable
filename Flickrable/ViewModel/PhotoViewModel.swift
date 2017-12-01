@@ -26,8 +26,10 @@ final class PhotoViewModel: ViewModelType {
         let activityIndicator = ActivityIndicator()
         let errorTracker = ErrorTracker()
         
+        let params: [String: Any] = ["method": "flickr.photos.getRecent", "api_key": flickr_api_key, "format": "json", "nojsoncallback": 1]
+        
         let photos = input.trigger.flatMapLatest { _ in
-            return PhotoApi<PhotoResponse>.getRecent(parameters: [:])
+            return PhotoApi<PhotoResponse>.getRecent(parameters: params)
                 .trackActivity(activityIndicator)
                 .trackError(errorTracker)
                 .asDriverOnErrorJustComplete()

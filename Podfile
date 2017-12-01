@@ -9,6 +9,12 @@ def rx_cocoa
     pod 'RxCocoa', '~> 4.0'
 end
 
+def test_pods
+    pod 'RxTest', '~> 4.0'
+    pod 'RxBlocking', '~> 4.0'
+    pod 'Nimble'
+end
+
 target 'Flickrable' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
@@ -26,6 +32,8 @@ target 'Flickrable' do
   target 'FlickrableTests' do
     inherit! :search_paths
     # Pods for testing
+    
+    test_pods
   end
 
   target 'FlickrableUITests' do

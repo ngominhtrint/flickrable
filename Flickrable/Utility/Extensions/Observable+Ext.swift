@@ -18,4 +18,14 @@ extension ObservableType {
             return Driver.empty()
         }
     }
+    
+    func mapToVoid() -> Observable<Void> {
+        return map { _ in }
+    }
+}
+
+extension SharedSequenceConvertibleType {
+    func mapToVoid() -> SharedSequence<SharingStrategy, Void> {
+        return map { _ in }
+    }
 }

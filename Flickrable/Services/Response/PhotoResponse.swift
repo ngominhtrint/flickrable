@@ -20,10 +20,10 @@ class PhotoResponse: ImmutableMappable {
     required init(map: Map) throws { }
     
     func mapping(map: Map) {
-        photos <- map["photo"]
-        page <- map["page"]
-        pages <- map["pages"]
-        perpage <- map["perpage"]
-        total <- map["total"]
+        photos <- map["photos.photo"]
+        page <- map["photos.page"]
+        pages <- map["photos.pages"]
+        perpage <- map["photos.perpage"]
+        total <- map["photos.total"]
     }
 }

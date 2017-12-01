@@ -27,6 +27,7 @@
 		EB27617F1FCFFD9B008E9FAE /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB27617E1FCFFD9B008E9FAE /* ErrorTracker.swift */; };
 		EB2761821FCFFDC3008E9FAE /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2761811FCFFDC3008E9FAE /* Observable+Ext.swift */; };
 		EB2761851FD00898008E9FAE /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2761841FD00898008E9FAE /* PhotoViewController.swift */; };
+		EB3E78431FD02C6600243226 /* PhotoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3E78421FD02C6600243226 /* PhotoViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		EB27617E1FCFFD9B008E9FAE /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		EB2761811FCFFDC3008E9FAE /* Observable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
 		EB2761841FD00898008E9FAE /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		EB3E78421FD02C6600243226 /* PhotoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModelTests.swift; sourceTree = "<group>"; };
 		ECD59417538CA5746B4B978F /* Pods-FlickrableTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrableTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrableTests/Pods-FlickrableTests.release.xcconfig"; sourceTree = "<group>"; };
 		F1D44554EB99859D47F7595A /* Pods-Flickrable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flickrable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flickrable/Pods-Flickrable.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +177,7 @@
 			children = (
 				EB27614C1FCFE500008E9FAE /* FlickrableTests.swift */,
 				EB27614E1FCFE500008E9FAE /* Info.plist */,
+				EB3E78421FD02C6600243226 /* PhotoViewModelTests.swift */,
 			);
 			path = FlickrableTests;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB27614D1FCFE500008E9FAE /* FlickrableTests.swift in Sources */,
+				EB3E78431FD02C6600243226 /* PhotoViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

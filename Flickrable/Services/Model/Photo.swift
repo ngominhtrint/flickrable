@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class Photo: NSObject, ImmutableMappable {
+class Photo: Mappable {
     
     public var id: String?
     public var owner: String?
@@ -21,7 +21,7 @@ class Photo: NSObject, ImmutableMappable {
     public var isFriend: Int?
     public var isFamily: Int?
     
-    required init(map: Map) throws { }
+    required init?(map: Map) { }
     
     func mapping(map: Map) {
         id <- map["id"]

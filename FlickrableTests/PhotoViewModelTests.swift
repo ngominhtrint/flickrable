@@ -9,7 +9,6 @@
 import XCTest
 import RxCocoa
 import RxSwift
-import RxBlocking
 
 @testable import Flickrable
 
@@ -37,6 +36,7 @@ class PhotoViewModelTests: XCTestCase {
     }
     
     private func createInput(trigger: Observable<Void> = Observable.never()) -> PhotoViewModel.Input {
-        return PhotoViewModel.Input(trigger: trigger.asDriverOnErrorJustComplete())
+        let selection: Observable<IndexPath> = Observable.never()
+        return PhotoViewModel.Input(trigger: trigger.asDriverOnErrorJustComplete(), selection: selection.asDriverOnErrorJustComplete())
     }
 }

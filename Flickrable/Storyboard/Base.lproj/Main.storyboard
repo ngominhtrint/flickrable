@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,17 +21,64 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_gradient" translatesAutoresizingMaskIntoConstraints="NO" id="IWG-8R-ds9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mWE-M5-lkb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="220" id="vdR-q2-nWK" customClass="PhotoCell" customModule="Flickrable" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="220"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vdR-q2-nWK" id="BYB-8W-f5j">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="219.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XV3-6P-0SU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="175.66666666666666"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYa-Qw-MGY">
+                                                    <rect key="frame" x="8" y="188.33333333333334" width="359" height="19.333333333333314"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XV3-6P-0SU" firstAttribute="leading" secondItem="BYB-8W-f5j" secondAttribute="leading" id="3LY-SL-3eQ"/>
+                                                <constraint firstItem="lYa-Qw-MGY" firstAttribute="leading" secondItem="BYB-8W-f5j" secondAttribute="leadingMargin" id="Fch-vc-4Qg"/>
+                                                <constraint firstAttribute="trailing" secondItem="XV3-6P-0SU" secondAttribute="trailing" id="GRe-cf-6aK"/>
+                                                <constraint firstItem="XV3-6P-0SU" firstAttribute="top" secondItem="BYB-8W-f5j" secondAttribute="top" id="H3p-Hu-jxa"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lYa-Qw-MGY" secondAttribute="trailing" id="N1a-KM-DSd"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lYa-Qw-MGY" secondAttribute="bottom" constant="4" id="bYS-tH-5J2"/>
+                                                <constraint firstItem="lYa-Qw-MGY" firstAttribute="top" secondItem="XV3-6P-0SU" secondAttribute="bottom" constant="12" id="baV-3P-jKs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="postContentView" destination="BYB-8W-f5j" id="rHh-G6-KGt"/>
+                                            <outlet property="postImageView" destination="XV3-6P-0SU" id="up4-53-Ggf"/>
+                                            <outlet property="postTitle" destination="lYa-Qw-MGY" id="d4j-v9-gVn"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IWG-8R-ds9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="16d-7Y-ydl"/>
+                            <constraint firstItem="mWE-M5-lkb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6pz-vD-oly"/>
+                            <constraint firstAttribute="bottom" secondItem="mWE-M5-lkb" secondAttribute="bottom" id="DOs-5k-2KR"/>
                             <constraint firstItem="IWG-8R-ds9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KhL-Gu-7Xa"/>
+                            <constraint firstAttribute="trailing" secondItem="mWE-M5-lkb" secondAttribute="trailing" id="acs-Hd-lpX"/>
                             <constraint firstAttribute="trailing" secondItem="IWG-8R-ds9" secondAttribute="trailing" id="q6E-o5-Lhs"/>
+                            <constraint firstItem="mWE-M5-lkb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qOf-CI-WTc"/>
                             <constraint firstAttribute="bottom" secondItem="IWG-8R-ds9" secondAttribute="bottom" id="y6u-ph-2Rp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ysu-1F-232"/>
+                    <connections>
+                        <outlet property="tableView" destination="mWE-M5-lkb" id="XPF-aO-EpC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

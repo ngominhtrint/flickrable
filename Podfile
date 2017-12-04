@@ -27,6 +27,7 @@ target 'Flickrable' do
   pod 'RxAlamofire'
   pod 'ObjectMapper'
   pod 'AlamofireObjectMapper'
+  pod 'AlamofireImage', '~> 3.1'
   pod 'TPKeyboardAvoiding', '~> 1.3.1'
 
   target 'FlickrableTests' do

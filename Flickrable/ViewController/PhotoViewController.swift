@@ -25,6 +25,11 @@ class PhotoViewController: UIViewController {
         bindViewModel()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     func configureTableView() {
         tableView.refreshControl = UIRefreshControl()
     }
@@ -54,14 +59,14 @@ class PhotoViewController: UIViewController {
         output.fetching
             .drive(tableView.refreshControl!.rx.isRefreshing)
             .disposed(by: disposeBag)
+        
         output.selectedPhoto
-            .drive(onNext: { photo in
-                performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+            .drive(onNext: { [unowned self] photo in
+                if let photoDetailVC = self.storyboard?.instantiateViewController(ofType: PhotoDetailViewController.self) {
+                    photoDetailVC.photo = PhotoItemViewModel(with: photo)
+                    self.navigationController?.pushViewController(photoDetailVC, animated: true)
+                }
             })
             .disposed(by: disposeBag)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
     }
 }

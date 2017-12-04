@@ -10,26 +10,26 @@ import UIKit
 
 class PhotoDetailViewController: UIViewController {
 
+    @IBOutlet weak var postImageView: UIImageView!
+    @IBOutlet weak var postTitle: UILabel!
+    
+    var photo: PhotoItemViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupView()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setupView() {
+        if let photoItem = photo, let imageUrl = URL(string: photoItem.imageUrl) {
+            postImageView.af_setImage(withURL: imageUrl, placeholderImage: UIImage(named: "placeholder"), filter: nil, progress: nil, progressQueue: DispatchQueue.main, imageTransition: .crossDissolve(0.2), runImageTransitionIfCached: true, completion: nil)
+            postTitle.text = photoItem.title
+        }
     }
-    */
-
 }

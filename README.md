@@ -16,6 +16,7 @@ The following functionality is completed:
 ## Technical things
 - Using RxSwift to handle asynchronous events and data driven.
 - Using MVVM architecture.
+- Implement unit testing.
 
 ## Video Walkthrough
 

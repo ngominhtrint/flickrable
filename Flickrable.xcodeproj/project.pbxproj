@@ -153,9 +153,9 @@
 				EB2761331FCFE500008E9FAE /* Flickrable */,
 				EB27614B1FCFE500008E9FAE /* FlickrableTests */,
 				EB2761561FCFE500008E9FAE /* FlickrableUITests */,
-				EB2761321FCFE500008E9FAE /* Products */,
-				ACAB6F8F7D223786EF5C33E5 /* Pods */,
 				BE7C130367F237E1BC54DCF9 /* Frameworks */,
+				ACAB6F8F7D223786EF5C33E5 /* Pods */,
+				EB2761321FCFE500008E9FAE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,15 +172,15 @@
 		EB2761331FCFE500008E9FAE /* Flickrable */ = {
 			isa = PBXGroup;
 			children = (
-				EB2761831FD0087E008E9FAE /* ViewController */,
-				EB27617B1FCFFD5B008E9FAE /* Utility */,
-				EB2761761FCFFC5C008E9FAE /* ViewModel */,
 				EB2761661FCFF3AD008E9FAE /* Services */,
 				EB2761651FCFF379008E9FAE /* Storyboard */,
+				EB27617B1FCFFD5B008E9FAE /* Utility */,
+				EB2761831FD0087E008E9FAE /* ViewController */,
+				EB2761761FCFFC5C008E9FAE /* ViewModel */,
 				EB2761341FCFE500008E9FAE /* AppDelegate.swift */,
 				EB27613E1FCFE500008E9FAE /* Assets.xcassets */,
-				EB2761431FCFE500008E9FAE /* Info.plist */,
 				EB27613B1FCFE500008E9FAE /* Flickrable.xcdatamodeld */,
+				EB2761431FCFE500008E9FAE /* Info.plist */,
 			);
 			path = Flickrable;
 			sourceTree = "<group>";
@@ -188,8 +188,8 @@
 		EB27614B1FCFE500008E9FAE /* FlickrableTests */ = {
 			isa = PBXGroup;
 			children = (
-				EB3DF6ED1FD57ECC0067735A /* StubResponses */,
 				EB3DF6EA1FD57E3D0067735A /* Helpers */,
+				EB3DF6ED1FD57ECC0067735A /* StubResponses */,
 				EB27614C1FCFE500008E9FAE /* FlickrableTests.swift */,
 				EB27614E1FCFE500008E9FAE /* Info.plist */,
 				EB3E78421FD02C6600243226 /* PhotoViewModelTests.swift */,
@@ -209,8 +209,8 @@
 		EB2761651FCFF379008E9FAE /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				EB2761381FCFE500008E9FAE /* Main.storyboard */,
 				EB2761401FCFE500008E9FAE /* LaunchScreen.storyboard */,
+				EB2761381FCFE500008E9FAE /* Main.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -218,9 +218,9 @@
 		EB2761661FCFF3AD008E9FAE /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				EB27616A1FCFF3D3008E9FAE /* Response */,
-				EB2761691FCFF3CD008E9FAE /* Model */,
 				EB2761671FCFF3BA008E9FAE /* Api */,
+				EB2761691FCFF3CD008E9FAE /* Model */,
+				EB27616A1FCFF3D3008E9FAE /* Response */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -282,8 +282,8 @@
 			isa = PBXGroup;
 			children = (
 				EB3DF6E21FD508A40067735A /* Cell */,
-				EB2761841FD00898008E9FAE /* PhotoViewController.swift */,
 				EB3DF6E71FD54BEE0067735A /* PhotoDetailViewController.swift */,
+				EB2761841FD00898008E9FAE /* PhotoViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -663,6 +663,7 @@
 				EB2761391FCFE500008E9FAE /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		EB2761401FCFE500008E9FAE /* LaunchScreen.storyboard */ = {
@@ -671,6 +672,7 @@
 				EB2761411FCFE500008E9FAE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

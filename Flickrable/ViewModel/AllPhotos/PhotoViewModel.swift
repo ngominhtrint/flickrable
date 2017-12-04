@@ -48,6 +48,9 @@ final class PhotoViewModel: ViewModelType {
             return photos[indexPath.row]
         }
         
-        return Output(fetching: fetching, photos: photos, selectedPhoto: selectedPhoto, error: errorTracker.asDriver())
+        return Output(fetching: fetching,
+                      photos: photos,
+                      selectedPhoto: selectedPhoto,
+                      error: errorTracker.asDriver())
     }
 }
